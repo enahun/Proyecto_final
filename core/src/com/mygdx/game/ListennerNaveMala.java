@@ -21,9 +21,8 @@ public class ListennerNaveMala extends InputListener{
         Sound sound = Gdx.audio.newSound(Gdx.files.internal("shoot.wav"));
         sound.play();
         naveMala.remove();
+         if (MyGdxGame.vida <=0) {
             MyGdxGame.perdiste.setVisible(true);
-        if (MyGdxGame.vida <=0) {
-
             MyGdxGame.perdiste.toFront();
         }
         MyGdxGame.vida--;
